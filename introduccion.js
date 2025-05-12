@@ -6,7 +6,15 @@ while (conversion !== "2") {
 
     switch (conversion) {
         case "1":
-           
+            let montoarg = parseFloat(prompt("Ingrese su valor en pesos"));
+            console.log(montoarg)
+            if (montoarg > 0) {
+                let resultadoUSD = montoarg / Divisa;
+                alert(`$${montoarg} ARS equivale a $${resultadoUSD.toFixed(2)} USD.`);
+            } else {
+                alert("Por favor, ingresá un número válido mayor que cero.");
+            }
+            
             break;
         case "2":
             alert("Gracias por usar la app.");
